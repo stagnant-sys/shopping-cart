@@ -1,0 +1,28 @@
+import React from "react";
+import ArticleOverview from "../component/ArticleOverview";
+import database from "../database";
+import "../style.css";
+
+const Shop = () => {
+  const articlesList = database.map(el => {
+    return (
+      <ArticleOverview 
+        key={el.id}
+        name={el.name}
+        description={el.description}
+        image={el.image}
+        price={el.price}
+      />
+    )
+  })
+
+  return (
+    <div>
+      <div className="articles-list">
+        {articlesList}
+      </div>
+    </div>
+  )
+}
+
+export default Shop;
