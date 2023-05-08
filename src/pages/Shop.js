@@ -8,6 +8,7 @@ const Shop = ({addToCart}) => {
     return (
       <ArticleOverview 
         key={el.id}
+        id={el.id}
         name={el.name}
         description={el.description}
         image={el.image}

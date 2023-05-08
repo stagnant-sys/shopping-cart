@@ -12,7 +12,7 @@ function App() {
   const [cartContent, setCartContent] = useState([
     {
       product: "Boisson 1",
-      quantity: 2,
+      quantity: 0,
       price: database[0].price,
       get totalPrice() {
         return (parseFloat(this.price) * this.quantity).toFixed(2);
@@ -20,8 +20,32 @@ function App() {
     },
     {
       product: "Boisson 2",
-      quantity: 3,
+      quantity: 0,
       price: database[1].price,
+      get totalPrice() {
+        return (parseFloat(this.price) * this.quantity).toFixed(2);
+      },
+    },
+    {
+      product: "Boisson 3",
+      quantity: 0,
+      price: database[2].price,
+      get totalPrice() {
+        return (parseFloat(this.price) * this.quantity).toFixed(2);
+      },
+    },
+    {
+      product: "Boisson 4",
+      quantity: 0,
+      price: database[3].price,
+      get totalPrice() {
+        return (parseFloat(this.price) * this.quantity).toFixed(2);
+      },
+    },
+    {
+      product: "Boisson 5",
+      quantity: 0,
+      price: database[4].price,
       get totalPrice() {
         return (parseFloat(this.price) * this.quantity).toFixed(2);
       },
@@ -51,7 +75,7 @@ function App() {
       {cartIsOpen ? <Cart cartContent={cartContent} /> : null}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop addToCart={() => addToCart(0)} />} />
+        <Route path="/shop" element={<Shop addToCart={addToCart} />} />
       </Routes>
     </BrowserRouter>
   );

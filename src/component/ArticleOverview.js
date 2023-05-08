@@ -9,7 +9,7 @@ const ArticleOverview = (props) => {
       <div className="product-overview__description">{props.description}</div>
       <div className="product-overview__buy">
         <div className="product-overview__price">CHF {props.price}.-</div>
-        <button className="add-to-cart-button" onClick={props.onShop}>Add</button>
+        <button className="add-to-cart-button" onClick={() => props.onShop(props.id)}>Add</button>
       </div>
     </div>
   )
