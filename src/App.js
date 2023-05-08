@@ -11,7 +11,7 @@ function App() {
   const [cartIsOpen, setCartIsOpen] = useState(false);
   const [cartContent, setCartContent] = useState([
     {
-      product: "Boisson 1",
+      product: database[0].name,
       quantity: 0,
       price: database[0].price,
       get totalPrice() {
@@ -19,7 +19,7 @@ function App() {
       },
     },
     {
-      product: "Boisson 2",
+      product: database[1].name,
       quantity: 0,
       price: database[1].price,
       get totalPrice() {
@@ -27,7 +27,7 @@ function App() {
       },
     },
     {
-      product: "Boisson 3",
+      product: database[2].name,
       quantity: 0,
       price: database[2].price,
       get totalPrice() {
@@ -35,7 +35,7 @@ function App() {
       },
     },
     {
-      product: "Boisson 4",
+      product: database[3].name,
       quantity: 0,
       price: database[3].price,
       get totalPrice() {
@@ -43,7 +43,7 @@ function App() {
       },
     },
     {
-      product: "Boisson 5",
+      product: database[4].name,
       quantity: 0,
       price: database[4].price,
       get totalPrice() {
@@ -54,7 +54,6 @@ function App() {
 
   const toggleCart = () => {
     setCartIsOpen(!cartIsOpen);
-    console.log(cartIsOpen);
   }
 
   const addToCart = (index) => {

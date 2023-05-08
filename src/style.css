@@ -8,6 +8,8 @@ body {
   margin: 0; }
 
 .navbar {
+  position: relative;
+  z-index: 3;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -46,12 +48,18 @@ body {
   .navbar-cart:hover {
     background-color: yellow; }
 
+.shop_container {
+  padding: 100px;
+  width: 100%;
+  display: flex;
+  justify-content: center; }
+
 .articles-list {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 100px;
-  gap: 100px; }
+  gap: 100px;
+  max-width: 80%; }
 
 .product-overview {
   border: 1px solid black;
@@ -66,7 +74,7 @@ body {
   font-size: 1.1rem; }
 
 .product-overview__image {
-  height: 150px; }
+  height: 200px; }
 
 .product-overview__description {
   font-weight: 300; }
@@ -82,9 +90,14 @@ body {
 .cart_container {
   position: fixed;
   right: 0;
+  top: 0;
   width: 30%;
   height: 100%;
-  background-color: lightcoral; }
+  padding: 50px 18px;
+  background-color: lightcoral;
+  display: flex;
+  flex-direction: column;
+  gap: 8px; }
 
 .cart-item {
   border: 1px solid black;

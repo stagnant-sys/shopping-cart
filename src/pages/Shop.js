@@ -19,11 +19,12 @@ const Shop = ({addToCart}) => {
   })
 
   return (
-    <div>
+    <div className="shop_container">
       <div className="articles-list">
         {articlesList}
       </div>
     </div>
+
   )
 }
 
