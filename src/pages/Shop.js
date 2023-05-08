@@ -3,7 +3,7 @@ import ArticleOverview from "../component/ArticleOverview";
 import database from "../database";
 import "../style.css";
 
-const Shop = () => {
+const Shop = ({addToCart}) => {
   const articlesList = database.map(el => {
     return (
       <ArticleOverview 
@@ -12,6 +12,7 @@ const Shop = () => {
         description={el.description}
         image={el.image}
         price={el.price}
+        onShop={addToCart}
       />
     )
   })
