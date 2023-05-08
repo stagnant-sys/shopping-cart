@@ -33,9 +33,16 @@ function App() {
     console.log(cartIsOpen);
   }
 
-  const addToCart = () => {
-    setCartContent(cartContent[0].quantity + 1);
-    // Actuellement, remplace l'array en entier. Il faut remplacer seulement cette valeur
+  const addToCart = (index) => {
+    const updatedArray = cartContent.slice();
+    updatedArray.map((el, i) => {
+      if (index !== i) {
+        return null;
+      } else {
+        el.quantity = el.quantity + 1;
+      }
+    })
+    setCartContent(updatedArray);
   }
 
   return (
@@ -44,7 +51,7 @@ function App() {
       {cartIsOpen ? <Cart cartContent={cartContent} /> : null}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/shop" element={<Shop addToCart={addToCart} />} />
+        <Route path="/shop" element={<Shop addToCart={() => addToCart(0)} />} />
       </Routes>
     </BrowserRouter>
   );
