@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -9,6 +9,16 @@
 
 body {
   margin: 0;
+}
+
+.background-image {
+  background-image: url('../public/img/adrien-olichon-RCAhiGJsUUE-unsplash.jpg');
+  background-size:cover;
+  background-repeat: no-repeat;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  z-index:-1;
 }
 
 .navbar {
@@ -43,7 +53,7 @@ body {
 
   &:hover {
     color: #cccccc;
-    border: 1px solid #cccccc;
+    text-decoration: underline;
     padding: 8px;
   }
 }
@@ -78,6 +88,7 @@ justify-content: center;
 }
 
 .product-overview {
+  background-color: #eeeeee;
   border: 1px solid black;
   padding: 16px;
   display: flex;

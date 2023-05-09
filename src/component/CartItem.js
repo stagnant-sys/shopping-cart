@@ -11,7 +11,6 @@ const CartItem = (props) => {
       <div>{props.product}</div>
       <div>
         <button onClick={() => props.decrementQty(props.id)}>-</button>
-        <div>{props.quantity}</div>
         <input type="number" value={props.quantity} onChange={handleChange} />
         <button onClick={() => props.incrementQty(props.id)}>+</button>
       </div>

@@ -110,9 +110,12 @@ function App() {
     setCartContent(updatedArray);
   }
 
+  const totalQty = cartContent.reduce(function (acc, el) { return acc + parseFloat(el.quantity); }, 0);
+
   return (
     <BrowserRouter>
-      <Navbar handleClick={toggleCart} />
+      <div className="background-image"></div>
+      <Navbar handleClick={toggleCart} totalQty={totalQty} />
       {cartIsOpen ? 
         <Cart 
           cartContent={cartContent} 
