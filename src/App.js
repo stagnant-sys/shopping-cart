@@ -68,7 +68,7 @@ function App() {
       if (index !== i) {
         return null;
       } else {
-        el.quantity = el.quantity + 1;
+        el.quantity = ++el.quantity;
       }
     })
     setCartContent(updatedArray);
@@ -80,7 +80,7 @@ function App() {
       if (id !== i) {
         return null;
       } else {
-        el.quantity = el.quantity - 1;
+        el.quantity = --el.quantity;
       }
     })
     setCartContent(updatedArray);
@@ -92,7 +92,7 @@ function App() {
       if (id !== i) {
         return null;
       } else {
-        el.quantity = el.quantity + 1;
+        el.quantity = ++el.quantity;
       }
     })
     setCartContent(updatedArray);
@@ -103,7 +103,7 @@ function App() {
     updatedArray.map((el, i) => {
       if (id !== i) {
         return null;
-      } else {
+      } else if (el.quantity > 0) {
         el.quantity = newValue;
       }
     })

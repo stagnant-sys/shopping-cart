@@ -1,6 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&family=Open+Sans:wght@400;700&display=swap');
+
+
 * {
   box-sizing: border-box;
-  font-family: -apple-system, BlinkMacSystemFont, 'Montserrat', 'Roboto', 'Oxygen',
+  font-family: -apple-system, BlinkMacSystemFont, 'Open Sans', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -28,14 +31,23 @@ body {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  height: 75px;
+  height: 60px;
   padding: 0 36px;
   background-color: #444444;
   color: #eeeeee;
 }
 
 .navbar-title {
-  font-size: 2.5rem;
+  font-family: "Audiowide", sans-serif;
+  color: #eeeeee;
+  font-size: 2rem; 
+  text-decoration: none;
+  transition: all 500ms ease-out;
+
+  &:hover {
+    color: #aaaaaa;
+    text-decoration: underline;
+  }
 }
 
 .navbar-links {
@@ -52,22 +64,36 @@ body {
   padding: 8px;
 
   &:hover {
-    color: #cccccc;
+    color: #aaaaaa;
     text-decoration: underline;
-    padding: 8px;
   }
 }
 
 .navbar-cart {
-  font-size: 1.5rem;
+  font-size: 1rem;
   color: #eeeeee;
-  background-color: #000000;
+  background-color: #BB86FC;
   padding: 8px 16px;
-  border-radius: 12px;
+  border: none;
+  border-radius: 8px;
   cursor: pointer;
+  transition: background-color 250ms ease-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+
+  img {
+    height: 30px;
+    width: 30px;
+  }
 
   &:hover {
-    background-color: yellow;
+    background-color: #8c65bd;
+  }
+
+  &:active {
+    background-color: #5c427b;
   }
 }
 
@@ -88,13 +114,21 @@ justify-content: center;
 }
 
 .product-overview {
-  background-color: #eeeeee;
+  background-color: #fcf9ffc3;
   border: 1px solid black;
   padding: 16px;
   display: flex;
   gap: 8px;
   flex-direction: column;
   align-items: center;
+  border-radius: 7px;
+  box-shadow: 5px 5px 5px #000000a1;
+  transition: all 500ms ease-out;
+
+  &:hover {
+    transform: scale(105%);
+    background-color: #fcf9ffe2;
+  }
 }
 
 .product-overview__name {
@@ -113,11 +147,33 @@ justify-content: center;
 .product-overview__buy {
   width: 100%;
   display: flex;
-  justify-content: space-around;
+  justify-content: end;
+  gap: 12px;
 }
 
 .add-to-cart-button {
   cursor: pointer;
+  height:30px;
+  width: 30px;
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    height: 25px;
+    width: 25px;
+  }
+
+  &:hover {
+    background-color: #fcf9ff;
+  }
+
+  &:active {
+    background-color: #e3e0e6;
+  }
 }
 
 .cart_container {
@@ -136,4 +192,23 @@ justify-content: center;
 .cart-item {
   border: 1px solid black;
   margin: 8px;
+}
+
+.homepage {
+  width:100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 100px;
+}
+
+.home-text {
+  color: #eeeeee;
+  font-size: 3rem;
+}
+
+.home-pitch {
+  color: #eeeeee;
+  font-size: 1.2rem;
+  text-align: center;
 }

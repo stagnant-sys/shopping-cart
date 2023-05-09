@@ -5,11 +5,10 @@ import "../style.css";
 const Navbar = ({ handleClick, totalQty }) => {
   return (
     <nav className="navbar">
-      <div className="navbar-title">AI DRINKS</div>
+      <Link to="/" className="navbar-title">A<span style={{color:"#BB86FC"}}>I</span> DRINKS</Link>
       <div className="navbar-links">
-        <Link to="/" className="navbar-links__link">HOME</Link>
-        <Link to="/shop" className="navbar-links__link">SHOP</Link>
-        <button className="navbar-cart" onClick={handleClick}>Cart ({totalQty})</button>
+        <Link to="/shop" className="navbar-links__link">Shop</Link>
+        <button className="navbar-cart" onClick={handleClick}><img alt="Panier" src="./img/cart-outline.png"/> ({totalQty})</button>
       </div>
     </nav>
   )
