@@ -1,16 +1,21 @@
-import { React, useState } from "react";
+import { React } from "react";
 import CartItem from "./CartItem";
 import "../style.css";
 
-const Cart = ({cartContent}) => {
+const Cart = ({ cartContent, incrementQty, decrementQty, updateQty }) => {
   const contentList = cartContent.map(el => {
     if (el.quantity) {
     return (
       <CartItem 
+        key={el.id}
+        id={el.id}
         product={el.product}
         quantity={el.quantity}
         price={el.price}
         totalPrice={el.totalPrice}
+        decrementQty={decrementQty}
+        incrementQty={incrementQty}
+        updateQty={updateQty}
       />
     )}
   });
@@ -22,7 +27,7 @@ const Cart = ({cartContent}) => {
     <div className="cart_container">
       <h2>Cart</h2>
       <div>{contentList}</div>
-      <div>Total: {totalSum.toFixed(2)}</div>
+      <div style={{fontWeight: 700}}>Total: CHF {totalSum.toFixed(2)}.-</div>
       <button>Passer la commande</button>
     </div>
   )
