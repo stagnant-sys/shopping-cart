@@ -12,14 +12,14 @@ const CartItem = (props) => {
   if (props.quantity > 0) {
   return (
     <div className="cart-item">
-      <div>{props.product}</div>
-      <div>
+      <img alt="" src={props.image} />
+      <div className="cart-item__product">{props.product}</div>
+      <div className="cart-item__quantity">
         <button onClick={() => props.decrementQty(props.id)}>-</button>
         <input type="number" min="0" value={props.quantity} onChange={handleChange} />
         <button onClick={() => props.incrementQty(props.id)}>+</button>
+        <div>CHF {props.totalPrice}.-</div>
       </div>
-      <div>{props.price}</div>
-      <div>{props.totalPrice}</div>
     </div>
   )
   }

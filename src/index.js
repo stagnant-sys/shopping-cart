@@ -5,12 +5,8 @@ import App from './App';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
-const closeCart = () => {
-  console.log('hi');
-}
-
 root.render(
   <React.StrictMode>
-    <App onClick={closeCart}/>
+    <App />
   </React.StrictMode>
 );

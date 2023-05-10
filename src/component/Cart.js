@@ -2,7 +2,7 @@ import { React } from "react";
 import CartItem from "./CartItem";
 import "../style.css";
 
-const Cart = ({ cartContent, incrementQty, decrementQty, updateQty }) => {
+const Cart = ({ cartContent, incrementQty, decrementQty, updateQty, closeCart }) => {
   const contentList = cartContent.map(el => {
     if (el.quantity) {
     return (
@@ -10,6 +10,7 @@ const Cart = ({ cartContent, incrementQty, decrementQty, updateQty }) => {
         key={el.id}
         id={el.id}
         product={el.product}
+        image={el.image}
         quantity={el.quantity}
         price={el.price}
         totalPrice={el.totalPrice}
@@ -25,10 +26,13 @@ const Cart = ({ cartContent, incrementQty, decrementQty, updateQty }) => {
 
   return (
     <div className="cart_container">
+      <button className="cart__close-button"onClick={closeCart}>X</button>
       <h2>Cart</h2>
       <div>{contentList}</div>
-      <div style={{fontWeight: 700}}>Total: CHF {totalSum.toFixed(2)}.-</div>
-      <button>Passer la commande</button>
+      <div className="cart-order">
+        <div style={{fontWeight: 700}}>Total: CHF {totalSum.toFixed(2)}.-</div>
+        <button>Passer la commande</button>
+      </div>
     </div>
   )
 }

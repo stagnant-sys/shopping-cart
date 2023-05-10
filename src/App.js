@@ -13,6 +13,7 @@ function App() {
     {
       id: database[0].id,
       product: database[0].name,
+      image: database[0].image,
       quantity: 0,
       price: database[0].price,
       get totalPrice() {
@@ -22,6 +23,7 @@ function App() {
     {
       id: database[1].id,
       product: database[1].name,
+      image: database[1].image,
       quantity: 0,
       price: database[1].price,
       get totalPrice() {
@@ -31,6 +33,7 @@ function App() {
     {
       id: database[2].id,
       product: database[2].name,
+      image: database[2].image,
       quantity: 0,
       price: database[2].price,
       get totalPrice() {
@@ -40,6 +43,7 @@ function App() {
     {
       id: database[3].id,
       product: database[3].name,
+      image: database[3].image,
       quantity: 0,
       price: database[3].price,
       get totalPrice() {
@@ -49,6 +53,7 @@ function App() {
     {
       id: database[4].id,
       product: database[4].name,
+      image: database[4].image,
       quantity: 0,
       price: database[4].price,
       get totalPrice() {
@@ -118,6 +123,7 @@ function App() {
       <Navbar handleClick={toggleCart} totalQty={totalQty} />
       {cartIsOpen ? 
         <Cart 
+          closeCart={toggleCart}
           cartContent={cartContent} 
           decrementQty={decrementQty} 
           incrementQty={incrementQty}
