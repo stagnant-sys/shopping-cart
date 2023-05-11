@@ -135,7 +135,7 @@ function App() {
       {cartIsOpen ? <div className="modal-background"></div> : null}
 
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/shopping-cart" element={<Home />} />
         <Route path="/shop" element={<Shop addToCart={addToCart} />} />
       </Routes>
 
