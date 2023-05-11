@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/shopping-cart/static/css/main.71945b36.css",
-    "main.js": "/shopping-cart/static/js/main.f5325bfd.js",
+    "main.js": "/shopping-cart/static/js/main.acd2c41c.js",
     "static/media/adrien-olichon-RCAhiGJsUUE-unsplash.jpg": "/shopping-cart/static/media/adrien-olichon-RCAhiGJsUUE-unsplash.2d97cd0483db449b25c1.jpg",
     "static/media/overview.png": "/shopping-cart/static/media/overview.4c97a2eea85b9a0115d8.png",
     "static/media/2.png": "/shopping-cart/static/media/2.5098e5695b8694739546.png",
@@ -11,10 +11,10 @@
     "static/media/1.png": "/shopping-cart/static/media/1.b82d19c6096588431f88.png",
     "index.html": "/shopping-cart/index.html",
     "main.71945b36.css.map": "/shopping-cart/static/css/main.71945b36.css.map",
-    "main.f5325bfd.js.map": "/shopping-cart/static/js/main.f5325bfd.js.map"
+    "main.acd2c41c.js.map": "/shopping-cart/static/js/main.acd2c41c.js.map"
   },
   "entrypoints": [
     "static/css/main.71945b36.css",
-    "static/js/main.f5325bfd.js"
+    "static/js/main.acd2c41c.js"
   ]
 }
