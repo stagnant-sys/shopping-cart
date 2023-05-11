@@ -2,7 +2,12 @@ import { React } from "react";
 import CartItem from "./CartItem";
 import "../style.css";
 
-const Cart = ({ cartContent, incrementQty, decrementQty, updateQty, closeCart }) => {
+const Cart = ({ cartContent, incrementQty, decrementQty, updateQty, closeCart, cartIsOpen }) => {
+  let classList = "cart_container";
+  if (cartIsOpen) {
+    classList += " open"
+  }
+
   const contentList = cartContent.map(el => {
     if (el.quantity) {
     return (
@@ -25,7 +30,7 @@ const Cart = ({ cartContent, incrementQty, decrementQty, updateQty, closeCart })
 
 
   return (
-    <div className="cart_container">
+    <div className={classList}>
       <button className="cart__close-button"onClick={closeCart}>X</button>
       <h2>Cart</h2>
       <div>{contentList}</div>

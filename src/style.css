@@ -140,6 +140,7 @@ body {
     background-color: #e3e0e6; }
 
 .cart_container {
+  transform: translateX(100%);
   position: fixed;
   right: 0;
   top: 0;
@@ -152,7 +153,11 @@ body {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  overflow-y: scroll; }
+  overflow-y: scroll;
+  transition: transform 300ms ease-out; }
+
+.open {
+  transform: translateX(0); }
 
 .cart__close-button {
   cursor: pointer;
@@ -233,7 +238,7 @@ body {
     background-color: #BB86FC;
     border: 2px solid #eeeeee;
     border-radius: 7px;
-    padding: 10px; }
+    padding: 16px; }
     .homepage a:hover {
       background-color: #e4cffe; }
     .homepage a:active {
@@ -261,5 +266,12 @@ body {
   margin: 39px;
   background-position: center;
   filter: grayscale(22%); }
+
+.modal-background {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background-color: #5555554f; }
 
 /*# sourceMappingURL=style.css.map */

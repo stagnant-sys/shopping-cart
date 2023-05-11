@@ -179,6 +179,7 @@ justify-content: center;
 }
 
 .cart_container {
+  transform: translateX(100%);
   position: fixed;
   right: 0;
   top: 0;
@@ -192,6 +193,11 @@ justify-content: center;
   flex-direction: column;
   gap: 8px;
   overflow-y: scroll;
+  transition: transform 300ms ease-out;
+}
+
+.open {
+  transform: translateX(0);
 }
 
 .cart__close-button {
@@ -300,7 +306,7 @@ justify-content: center;
     background-color: #BB86FC;
     border: 2px solid #eeeeee;
     border-radius: 7px;
-    padding: 10px;
+    padding: 16px;
 
     &:hover {
       background-color: #e4cffe;
@@ -337,4 +343,12 @@ justify-content: center;
   margin: 39px;
   background-position: center;
   filter: grayscale(22%);
+}
+
+.modal-background {
+  position: fixed;
+  height: 100vh;
+  width: 100vw;
+  z-index: 2;
+  background-color: #5555554f;
 }

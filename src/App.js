@@ -119,21 +119,26 @@ function App() {
 
   return (
     <BrowserRouter>
+
       <div className="background-image"></div>
+
       <Navbar handleClick={toggleCart} totalQty={totalQty} />
-      {cartIsOpen ? 
-        <Cart 
-          closeCart={toggleCart}
-          cartContent={cartContent} 
-          decrementQty={decrementQty} 
-          incrementQty={incrementQty}
-          updateQty={updateQty} 
-        /> : 
-        null}
+      
+      <Cart 
+        cartIsOpen={cartIsOpen}
+        closeCart={toggleCart}
+        cartContent={cartContent} 
+        decrementQty={decrementQty} 
+        incrementQty={incrementQty}
+        updateQty={updateQty} 
+      />
+      {cartIsOpen ? <div className="modal-background"></div> : null}
+
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/shop" element={<Shop addToCart={addToCart} />} />
       </Routes>
+
     </BrowserRouter>
   );
 }
